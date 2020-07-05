@@ -9,8 +9,8 @@ import { PassportModule } from '@nestjs/passport';
 
 @Module({
   imports: [
-    TypeOrmModule.forFeature([TaskRepository]),
     PassportModule.register({ defaultStrategy: 'jwt' }),
+    TypeOrmModule.forFeature([TaskRepository]),
     AuthModule,
   ],
   controllers: [TasksController],
